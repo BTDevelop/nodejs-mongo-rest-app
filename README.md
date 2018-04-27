@@ -1,2 +1,4 @@
 # nodejs-mongo-rest-app
-MongoDB/Express JS/Restful API
+Node.js, MongoDB, Express JS, Restful API
+
+
