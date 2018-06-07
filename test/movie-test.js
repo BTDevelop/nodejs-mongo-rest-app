@@ -8,7 +8,7 @@ chai.use(chaihttp);
 let token;
 let movieId;
 
-describe('/api/movies test', () => {
+describe('/api/movies test ', () => {
     before((done) => {
         chai.request(server)
             .post('/authenticate')
@@ -19,7 +19,7 @@ describe('/api/movies test', () => {
             })
     });
 
-    describe('/GET movies test', () => {
+    describe('/GET movies test ', () => {
         it("it should GET all the movies", (done) => {
             chai.request(server)
              .get('/api/movies')
@@ -33,7 +33,7 @@ describe('/api/movies test', () => {
      });
 
      //control test
-     describe('/POST movie test', () => {
+     describe('/POST movie test ', () => {
         it("it should POST a movie", (done) => {
             const movie = {
                 title: "Mocha Mocha",
@@ -63,7 +63,7 @@ describe('/api/movies test', () => {
         })
      });
 
-     describe('/GET/:movie_id movie test', () => {
+     describe('/GET/:movie_id movie test ', () => {
         it("it should GET movie by the given id", (done) => {
             chai.request(server)
              .get('/api/movies/'+ movieId)
