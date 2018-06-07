@@ -82,7 +82,7 @@ describe('/api/movies test', () => {
         })
      });
 
-       describe('/PUT/:movie_id movie test', () => {
+       describe('/PUT/:movie_id movie test ', () => {
         it("it should UPDATE a movie given by id", (done) => {
             const movie = {
                 title: "Mocha Mocha Put",
@@ -111,7 +111,7 @@ describe('/api/movies test', () => {
         })
      });
 
-     describe('/DELETE/:movie_id movie test', () => {
+     describe('/DELETE/:movie_id movie test ', () => {
         it("it should DELETE a movie given by id", (done) => {
             chai.request(server)
              .delete('/api/movies/'+ movieId)
