@@ -8,7 +8,7 @@ chai.use(chaihttp);
 let token;
 let movieId;
 
-describe('/api/movies tests', () => {
+describe('/api/movies test', () => {
     before((done) => {
         chai.request(server)
             .post('/authenticate')
@@ -19,7 +19,7 @@ describe('/api/movies tests', () => {
             })
     });
 
-    describe('/GET movies', () => {
+    describe('/GET movies test', () => {
         it("it should GET all the movies", (done) => {
             chai.request(server)
              .get('/api/movies')
@@ -33,7 +33,7 @@ describe('/api/movies tests', () => {
      });
 
      //control test
-     describe('/POST movie', () => {
+     describe('/POST movie test', () => {
         it("it should POST a movie", (done) => {
             const movie = {
                 title: "Mocha Mocha",
@@ -63,7 +63,7 @@ describe('/api/movies tests', () => {
         })
      });
 
-     describe('/GET/:movie_id movie', () => {
+     describe('/GET/:movie_id movie test', () => {
         it("it should GET movie by the given id", (done) => {
             chai.request(server)
              .get('/api/movies/'+ movieId)
@@ -82,7 +82,7 @@ describe('/api/movies tests', () => {
         })
      });
 
-       describe('/PUT/:movie_id movie', () => {
+       describe('/PUT/:movie_id movie test', () => {
         it("it should UPDATE a movie given by id", (done) => {
             const movie = {
                 title: "Mocha Mocha Put",
@@ -111,7 +111,7 @@ describe('/api/movies tests', () => {
         })
      });
 
-     describe('/DELETE/:movie_id movie', () => {
+     describe('/DELETE/:movie_id movie test', () => {
         it("it should DELETE a movie given by id", (done) => {
             chai.request(server)
              .delete('/api/movies/'+ movieId)
