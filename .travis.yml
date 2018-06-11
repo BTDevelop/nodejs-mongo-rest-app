@@ -1,11 +1,8 @@
 language: node_js
 node_js:
   - 8
-before_script: 
-  #- chmod 0777 ./node_modules/.bin/mocha
-  - npm install mocha
 before_install:
-  - npm install -g node-gyp 
+  - npm install
   - export NODE_ENV=production
 script:
-  - npm run test
+- npm run test
