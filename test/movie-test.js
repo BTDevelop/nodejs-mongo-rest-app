@@ -67,7 +67,7 @@ describe('/api/movies test ', () => {
         it("it should GET movie by the given id", (done) => {
             chai.request(server)
              .get('/api/movies/'+ movieId)
-             .set('x-access-token', token)
+             .set('x-access-token', "sdsadsasa")
              .end((err, res) => {
                  res.should.have.status(200);
                  res.body.should.be.a('object');
