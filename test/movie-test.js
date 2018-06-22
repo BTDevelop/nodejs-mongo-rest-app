@@ -8,7 +8,7 @@ chai.use(chaihttp);
 let token;
 let movieId;
 
-describe('/api/movies test ', () => {
+describe('/api/movies test', () => {
     before((done) => {
         chai.request(server)
             .post('/authenticate')
@@ -19,7 +19,7 @@ describe('/api/movies test ', () => {
             })
     });
 
-    describe('/GET movies test ', () => {
+    describe('/GET movies test', () => {
         it("it should GET all the movies", (done) => {
             chai.request(server)
              .get('/api/movies')
@@ -33,7 +33,7 @@ describe('/api/movies test ', () => {
      });
 
      //control test
-     describe('/POST movie test ', () => {
+     describe('/POST movie test', () => {
         it("it should POST a movie", (done) => {
             const movie = {
                 title: "Mocha Mocha",
@@ -63,8 +63,8 @@ describe('/api/movies test ', () => {
         })
      });
 
-     describe('/GET/:movie_id movie test ', () => {
-        it("it should GET movie by the given id", (done) => {
+     describe('/GET/:movie_id movie test', () => {
+        it("it should GET movie by the given ID", (done) => {
             chai.request(server)
              .get('/api/movies/'+ movieId)
              .set('x-access-token', token)
@@ -82,8 +82,8 @@ describe('/api/movies test ', () => {
         })
      });
 
-       describe('/PUT/:movie_id movie test ', () => {
-        it("it should UPDATE a movie given by id", (done) => {
+       describe('/PUT/:movie_id movie test', () => {
+        it("it should UPDATE a movie given by ID", (done) => {
             const movie = {
                 title: "Mocha Mocha Put",
                 director_id: "5b0e3bbe00fd1603d0cae42c",
@@ -111,8 +111,8 @@ describe('/api/movies test ', () => {
         })
      });
 
-     describe('/DELETE/:movie_id movie test ', () => {
-        it("it should DELETE a movie given by id", (done) => {
+     describe('/DELETE/:movie_id movie test', () => {
+        it("it should DELETE a movie given by ID", (done) => {
             chai.request(server)
              .delete('/api/movies/'+ movieId)
              .set('x-access-token', token)
@@ -129,7 +129,5 @@ describe('/api/movies test ', () => {
              })
         })
      });
-
-
 });
 
